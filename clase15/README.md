@@ -1,0 +1,42 @@
+# El juego de Pepita
+
+Este es un ejercicio iterativo para introducir OOP usando a pepita, Wollok y Wollok Game.
+
+Este segundo paso, introduce el concepto de testing.
+Los enunciados repiten los del paso anterior, pero se provee el código completo para trabajar en los tests.
+El código resuelto contiene un error que será detectado por los tests.
+
+## Enunciado
+
+Pepita es una golondrina que puede comer y volar, al hacerlo sube y baja su energía respectivamente.
+
+- Para ello, pepita debe recordar su energía, que al iniciar debe ser de 100 calorías.
+- Este estado es interno y no es prudente que preguntarle por su energía a pepita. En cambio, podemos preguntarle si está cansada, a lo que pepita contesta afirmativamente si su energía se reduce a menos de 20 calorías.
+- Al volar consume energía, a razón de 10 calorías por metro.
+- Al comer, aumenta su energía en función de las calorías que otorga la comida. Queremos que pepita pueda comer de todo pero inicialmente tenemos dos posibles comidas:
+  - El alpiste, que otorga 5 calorías.
+
+## Código provisto
+
+- Toda la implementación de pepita según el enunciado, pero incluye un error.
+
+## Pruebas a realizar
+
+- Al iniciar pepita no está cansada.
+- Si la hacemos volar 9 metros, se cansa
+- Luego de comer alpiste, sigue cansada
+- Si come de nuevo alpiste, ya no está cansada.
+
+- Si, en cambio, hacemos que coma una manzana, ya no está cansada.
+
+## Desafío: manzanas madurando
+
+En el caso de las manzanas, la cantidad de calorías que otorgan depende de su nivel maduración.
+
+- Modelamos la maduración de la manzana como un porcentaje, de 0 a 100, y queremos que la manzana entienda un mensaje "madurar", que primero la hace madurar y, pasado cierto tiempo, pudrirse.
+- Inicialmente la manzana otorga 50 calorías.
+- La maduración se da de a saltos de 10%, hasta llegar al 100% de maduración en el que la manzana otorga 100 calorías.
+- Luego, la manzana comienza a pudrirse, y cada vez que recibe el mensaje "madurar" debe perder 20 calorías.
+- En ningún caso la manzana podrida puede otorgar menos de 0 calorías.
+
+La manzana que tenemos no cumple con los objetivos, pero antes de corregirla escribamos los tests que la ponen a prueba.
